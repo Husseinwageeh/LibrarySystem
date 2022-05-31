@@ -8,15 +8,18 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class BooksPageController {
-    public AnchorPane BookPane;
+    public AnchorPane mainpane;
 
+    public void setMainpane(AnchorPane mainpane) {
+        this.mainpane = mainpane;
+    }
 
     public void OpenAddBook(ActionEvent event) throws IOException {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("AddBook.fxml"));
         Parent OpenBooks= root.load();
-        MembersPageController b = root.getController();
-        BookPane.getChildren().removeAll();
-        BookPane.getChildren().setAll(OpenBooks);
+        //MembersPageController b = root.getController();
+        mainpane.getChildren().removeAll();
+        mainpane.getChildren().setAll(OpenBooks);
 
 
     }

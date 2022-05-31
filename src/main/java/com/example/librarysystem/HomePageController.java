@@ -22,6 +22,7 @@ public class HomePageController {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("BooksPage.fxml"));
         Parent OpenBooks= root.load();
         BooksPageController b = root.getController();
+        b.setMainpane(mainPane);
         mainPane.getChildren().removeAll();
         mainPane.getChildren().setAll(OpenBooks);
 

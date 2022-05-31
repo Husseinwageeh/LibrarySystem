@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="AddBookPane" prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.AddBookController">
+   <children>
+      <Label layoutX="148.0" layoutY="24.0" text="Add Book" textFill="#c4921e" wrapText="true">
+         <font>
+            <Font name="Garamond Bold" size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="AddBookNameTxt" layoutX="210.0" layoutY="115.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="AddAuthorTxt" layoutX="210.0" layoutY="151.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="AddLanguageTxt" layoutX="211.0" layoutY="187.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="AddPublisherTxt" layoutX="210.0" layoutY="229.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="115.0" layoutY="119.0" text="Name" />
+      <Label layoutX="115.0" layoutY="155.0" text="Author" />
+      <Label layoutX="115.0" layoutY="192.0" text="Language" />
+      <Label layoutX="115.0" layoutY="233.0" text="Publisher" />
+      <Label layoutX="115.0" layoutY="270.0" text="Published Date" />
+      <Button fx:id="BackBookBtn" layoutX="63.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Back" />
+      <Button fx:id="AddBookBtn" layoutX="327.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Add" />
+      <DatePicker fx:id="AddPublishDatePicker" layoutX="210.0" layoutY="266.0" />
+   </children>
+</AnchorPane>
