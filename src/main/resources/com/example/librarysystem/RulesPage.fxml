@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.layout.Layer?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.RulesPageController">
+<AnchorPane prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.RulesPageController">
    <children>
-      <Layer layoutX="231.0" layoutY="144.0" />
-      <Label fx:id="RulesLabel" layoutX="88.0" layoutY="65.0" prefHeight="270.0" prefWidth="398.0" text="Label" />
+      <Label fx:id="RulesLabel" layoutX="8.0" layoutY="79.0" prefHeight="270.0" prefWidth="398.0" text="Label" />
    </children>
 </AnchorPane>
