@@ -30,6 +30,6 @@ public class Rules {
                     "7- Do not fuck with or in the library\n" +
                     "---------------------------------------------------------------------------------------");
         }
-        return "Rule";
+      //  return "Rule";
     }
 }
