@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class BooksPageController {
+public class  BooksPageController {
     public AnchorPane mainpane;
 
     public void setMainpane(AnchorPane mainpane) {

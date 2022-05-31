@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="AddBookPane" prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.AddBookController">
    <children>
       <Label layoutX="148.0" layoutY="24.0" text="Add Book" textFill="#c4921e" wrapText="true">
@@ -24,7 +23,7 @@
       <Label layoutX="115.0" layoutY="192.0" text="Language" />
       <Label layoutX="115.0" layoutY="233.0" text="Publisher" />
       <Label layoutX="115.0" layoutY="270.0" text="Published Date" />
-      <Button fx:id="BackBookBtn" layoutX="63.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Back" />
+      <Button fx:id="BackBookBtn" layoutX="63.0" layoutY="335.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="102.0" text="Back" />
       <Button fx:id="AddBookBtn" layoutX="327.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Add" />
       <DatePicker fx:id="AddPublishDatePicker" layoutX="210.0" layoutY="266.0" />
    </children>
