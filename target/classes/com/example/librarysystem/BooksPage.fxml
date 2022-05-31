@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.BooksPageController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ListView layoutX="2.0" layoutY="150.0" prefHeight="249.0" prefWidth="432.0" />
+            <Button fx:id="AddBookbtn" layoutX="36.0" layoutY="54.0" mnemonicParsing="false" text="Add Book" />
+            <Button layoutX="151.0" layoutY="54.0" mnemonicParsing="false" text="Remove Book" />
+            <Button layoutX="292.0" layoutY="54.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

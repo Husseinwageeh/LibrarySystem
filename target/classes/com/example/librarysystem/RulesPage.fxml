@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.RulesPageController">
+   <children>
+      <ImageView fitHeight="145.0" fitWidth="392.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\Capture.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
