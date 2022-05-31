@@ -10,10 +10,10 @@
    <children>
       <AnchorPane fx:id="AddB" layoutX="1.0" prefHeight="406.0" prefWidth="476.0">
          <children>
-            <ListView layoutX="7.0" layoutY="137.0" prefHeight="234.0" prefWidth="378.0" />
-            <Button fx:id="AddBookbtn" layoutX="29.0" layoutY="105.0" mnemonicParsing="false" onAction="#OpenAddBook" prefHeight="26.0" prefWidth="90.0" text="Add Book" />
-            <Button fx:id="RemoveBookBtn" layoutX="258.0" layoutY="105.0" mnemonicParsing="false" onAction="#RemoveBook" text="Remove Book" />
-            <Label layoutX="35.0" layoutY="21.0" prefHeight="46.0" prefWidth="322.0" text="Welcome to Mohamed Fawzy's Library">
+            <ListView layoutX="29.0" layoutY="138.0" prefHeight="234.0" prefWidth="378.0" />
+            <Button fx:id="AddBookbtn" layoutX="35.0" layoutY="104.0" mnemonicParsing="false" onAction="#OpenAddBook" prefHeight="26.0" prefWidth="90.0" text="Add Book" />
+            <Button fx:id="RemoveBookBtn" layoutX="312.0" layoutY="105.0" mnemonicParsing="false" onAction="#RemoveBook" text="Remove Book" />
+            <Label layoutX="57.0" layoutY="23.0" prefHeight="46.0" prefWidth="322.0" text="Welcome to Mohamed Fawzy's Library">
                <font>
                   <Font name="Garamond Bold" size="19.0" />
                </font>
