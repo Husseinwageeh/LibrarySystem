@@ -38,6 +38,13 @@ private Stage stage;
             stage.setScene(scene);
             stage.show();
         }
+        else {
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
+            Scene scene = new Scene(root.load());
+            stage.setScene(scene);
+            stage.show();
+        }
 
     }
 }
