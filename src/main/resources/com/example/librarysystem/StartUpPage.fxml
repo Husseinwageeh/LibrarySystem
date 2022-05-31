@@ -15,8 +15,10 @@
    <children>
       <ImageView fitHeight="368.0" fitWidth="622.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <!-- mtnsou4 t7oto el absolute path mn 3andoko -->
-            <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\253332.jpg" />
+            <!-- mtnsou4 t7oto el absolute path mn 3andoko
+            for hussein copy  ...  C:\Users\omarw\LibrarySytem\LibrarySystem\src\253332.jpg
+            for moustafa copy ...  K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\253332.jpg-->
+            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\253332.jpg" />
          </image>
          <effect>
             <InnerShadow />
