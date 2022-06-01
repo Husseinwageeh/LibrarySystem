@@ -48,7 +48,7 @@
                   <ImageView fitHeight="183.0" fitWidth="161.0" layoutX="14.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <!-- these are some photos, 23mlo nfs 7war el startUpPage
-                       For Moustafa copy "K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src + name of the photo -->
+                       For Moustafa copy " -->
                         <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg" />
                      </image>
                      <effect>
