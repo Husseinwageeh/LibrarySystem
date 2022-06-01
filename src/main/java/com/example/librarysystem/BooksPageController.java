@@ -24,6 +24,8 @@ public class  BooksPageController {
 
     }
 
-    public void RemoveBook(ActionEvent event) {
+
+    public void RemoveBook(ActionEvent actionEvent) {
+
     }
 }
