@@ -45,5 +45,10 @@
             <Blend />
          </effect>
       </PasswordField>
+      <Button fx:id="LoginFawzyBtn" layoutX="414.0" layoutY="261.0" mnemonicParsing="false" onAction="#LoginFawzy" prefHeight="26.0" prefWidth="179.0" text="Log In As Mohamed Fawzy">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

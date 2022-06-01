@@ -1,10 +1,16 @@
 package com.example.librarysystem;
 
 public class Book implements iBook{
+    int code;
     String Title;
-    int [] Quantity;
+    int  Quantity;
     int numAvailable;
 
+
+    @Override
+    public String getCode() {
+        return null;
+    }
 
     @Override
     public String getTitle() {
@@ -17,12 +23,12 @@ public class Book implements iBook{
     }
 
     @Override
-    public int[] getQuantity() {
+    public int getQuantity() {
         return Quantity;
     }
 
     @Override
-    public void setQuantity(int [] quantity) {
+    public void setQuantity(int  quantity) {
         Quantity = quantity;
     }
 
