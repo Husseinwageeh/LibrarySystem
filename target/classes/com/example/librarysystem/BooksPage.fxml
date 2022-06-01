@@ -18,6 +18,7 @@
                   <Font name="Garamond Bold" size="19.0" />
                </font>
             </Label>
+            <Label fx:id="ChekRemoveBook" layoutX="343.0" layoutY="69.0" text="Label" />
          </children>
       </AnchorPane>
    </children>
