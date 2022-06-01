@@ -1,8 +1,8 @@
 package com.example.librarysystem;
 
 public class Book implements iBook{
-    String Title;
-    int [] Quantity;
+    String Book_ID, Title, Author, Language, Publisher;
+    int Quantity;
     int numAvailable;
 
 
@@ -17,12 +17,12 @@ public class Book implements iBook{
     }
 
     @Override
-    public int[] getQuantity() {
+    public int getQuantity() {
         return Quantity;
     }
 
     @Override
-    public void setQuantity(int [] quantity) {
+    public void setQuantity(int quantity) {
         Quantity = quantity;
     }
 
