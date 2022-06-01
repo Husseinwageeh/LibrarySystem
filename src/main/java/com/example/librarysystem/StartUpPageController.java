@@ -27,7 +27,6 @@ private Stage stage;
 
 @FXML
     public void logIN (ActionEvent event) throws IOException {
-
         String id = username.getText();
         String Password = password.getText();
         if(id .equals("admin") && Password.equals("admin"))
@@ -38,13 +37,19 @@ private Stage stage;
             stage.setScene(scene);
             stage.show();
         }
-        else {
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
-            Scene scene = new Scene(root.load());
-            stage.setScene(scene);
-            stage.show();
+        else
+        {
+            System.out.println("Incorrect Password, Try again");
         }
+
+    }
+
+    public void LoginFawzy(ActionEvent event) throws IOException {
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
+        Scene scene = new Scene(root.load());
+        stage.setScene(scene);
+        stage.show();
 
     }
 }

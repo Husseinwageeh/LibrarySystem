@@ -9,7 +9,6 @@ import java.io.IOException;
 
 public class BooksPageController {
     public AnchorPane mainpane;
-
     public void setMainpane(AnchorPane mainpane) {
         this.mainpane = mainpane;
     }
@@ -17,7 +16,8 @@ public class BooksPageController {
     public void OpenAddBook(ActionEvent event) throws IOException {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("AddBook.fxml"));
         Parent OpenBooks= root.load();
-        //MembersPageController b = root.getController();
+        AddBookController b= new AddBookController();
+        b.setMainpane(mainpane);
         mainpane.getChildren().removeAll();
         mainpane.getChildren().setAll(OpenBooks);
 
