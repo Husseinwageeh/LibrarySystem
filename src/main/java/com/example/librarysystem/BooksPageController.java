@@ -16,8 +16,8 @@ public class  BooksPageController {
     public void OpenAddBook(ActionEvent event) throws IOException {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("AddBook.fxml"));
         Parent OpenBooks= root.load();
-        AddBookController b= new AddBookController();
-        b.setMainpane(mainpane);
+        AddBookController b= root.getController();
+        b.setMainPane(mainpane);
         mainpane.getChildren().removeAll();
         mainpane.getChildren().setAll(OpenBooks);
 
