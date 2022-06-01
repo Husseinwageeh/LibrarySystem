@@ -2,7 +2,12 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -12,23 +17,63 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="123.0">
                <children>
-                  <Button fx:id="BooksBtn" layoutX="1.0" layoutY="118.0" mnemonicParsing="false" onAction="#OpenBooks" prefHeight="52.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Books" />
-                  <Button fx:id="MemberBtn" layoutX="1.0" layoutY="177.0" mnemonicParsing="false" onAction="#OpenMembers" prefHeight="52.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Members">
+                  <Button fx:id="BooksBtn" layoutX="1.0" layoutY="118.0" mnemonicParsing="false" onAction="#OpenBooks" prefHeight="52.0" prefWidth="206.0" style="-fx-background-color: #9e700b;" text="Books" />
+                  <Button fx:id="MemberBtn" layoutX="1.0" layoutY="177.0" mnemonicParsing="false" onAction="#OpenMembers" prefHeight="52.0" prefWidth="206.0" style="-fx-background-color: #9e700b;" text="Members">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="RulesBtn" layoutY="296.0" mnemonicParsing="false" onAction="#OpenRules" prefHeight="52.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Rules" />
-                  <Button layoutY="355.0" mnemonicParsing="false" onAction="#exit" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Exit">
+                  <Button fx:id="RulesBtn" layoutY="296.0" mnemonicParsing="false" onAction="#OpenRules" prefHeight="52.0" prefWidth="206.0" style="-fx-background-color: #9e700b;" text="Rules" />
+                  <Button layoutY="355.0" mnemonicParsing="false" onAction="#exit" prefHeight="42.0" prefWidth="206.0" style="-fx-background-color: #9e700b;" text="Exit">
                      <font>
                         <Font name="Bold Italic Art" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="BorrowBtn" layoutX="1.0" layoutY="235.0" mnemonicParsing="false" onAction="#OpenBorrow" prefHeight="52.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Borrow" />
+                  <Button fx:id="BorrowBtn" layoutX="1.0" layoutY="235.0" mnemonicParsing="false" onAction="#OpenBorrow" prefHeight="52.0" prefWidth="206.0" style="-fx-background-color: #9e700b;" text="Borrow" />
                   <FontAwesomeIconView fill="#9e700b" glyphName="BOOK" layoutX="49.0" layoutY="82.0" size="70" wrappingWidth="77.99993896484375" />
                </children>
             </AnchorPane>
-          <AnchorPane fx:id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="500.0" />
+          <AnchorPane fx:id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="502.0">
+               <children>
+                  <Label layoutX="98.0" layoutY="31.0" text="Welcome To The Home Page" textFill="#9c782a">
+                     <font>
+                        <Font name="Garamond Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="HyperLinkBtn" layoutX="14.0" layoutY="369.0" prefHeight="26.0" prefWidth="198.0" text="This is a HyperLink Click Here For Repositry">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Hyperlink>
+                  <ImageView fitHeight="183.0" fitWidth="161.0" layoutX="14.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <!-- these are some photos, 23mlo nfs 7war el startUpPage
+                       For Moustafa copy " -->
+                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg" />
+                     </image>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="180.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="389.0" layoutY="375.0" text="All Rights Reserved">
+                     <font>
+                        <Font name="System Bold Italic" size="9.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="349.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect></AnchorPane>
         </items>
       </SplitPane>
    </children>
