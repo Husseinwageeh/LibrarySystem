@@ -24,7 +24,7 @@
                         <Font name="Bold Italic Art" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="BorrowBtn" layoutX="1.0" layoutY="235.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Borrow" />
+                  <Button fx:id="BorrowBtn" layoutX="1.0" layoutY="235.0" mnemonicParsing="false" onAction="#OpenBorrow" prefHeight="52.0" prefWidth="175.0" style="-fx-background-color: #9e700b;" text="Borrow" />
                   <FontAwesomeIconView fill="#9e700b" glyphName="BOOK" layoutX="49.0" layoutY="82.0" size="70" wrappingWidth="77.99993896484375" />
                </children>
             </AnchorPane>

@@ -15,7 +15,7 @@ public class MembersPageController implements Initializable {
     public TextField AddNameTxt;
     public TextField AddPhoneTxt;
     public ChoiceBox GenderChoiceBox;
-    ObservableList<String> genderTypes = FXCollections.observableArrayList("Male", "Female", "3awad(5awal)", "Hany");
+    ObservableList<String> genderTypes = FXCollections.observableArrayList("Male", "Female","Prefer not to say");
 
 
     @Override

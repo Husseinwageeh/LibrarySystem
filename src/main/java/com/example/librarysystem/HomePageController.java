@@ -45,4 +45,12 @@ public class HomePageController {
         mainPane.getChildren().setAll(OpenBooks);
     }
 
+    public void OpenBorrow(ActionEvent event) throws IOException {
+        FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("BorrowBookPage.fxml"));
+        Parent OpenBooks= root.load();
+        BorrowBookPageController b = root.getController();
+        mainPane.getChildren().removeAll();
+        mainPane.getChildren().setAll(OpenBooks);
+
+    }
 }

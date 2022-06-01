@@ -34,6 +34,7 @@
                         <Label layoutX="68.0" layoutY="238.0" text="Age" />
                         <Label layoutX="67.0" layoutY="282.0" text="Gender" />
                         <ChoiceBox fx:id="GenderChoiceBox" layoutX="173.0" layoutY="278.0" prefWidth="150.0" />
+                        <Label fx:id="CheckAddMember" layoutX="376.0" layoutY="300.0" text="Label" />
                      </children>
                   </AnchorPane>
               </content>
@@ -46,6 +47,7 @@
                         <FontAwesomeIconView fill="#9e700b" glyphName="USERS" layoutX="15.0" layoutY="60.0" selectionFill="#735454" size="50" text="" />
                         <Button fx:id="BackListBtn" layoutX="36.0" layoutY="339.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Back" />
                         <Button fx:id="RemoveMemberBtn" layoutX="328.0" layoutY="339.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Remove" />
+                        <Label fx:id="CheckMemberRemove" layoutX="210.0" layoutY="344.0" text="Label" />
                      </children>
                   </AnchorPane>
               </content>

@@ -27,5 +27,6 @@
       <Button fx:id="BackBookBtn" layoutX="63.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Back" />
       <Button fx:id="AddBookBtn" layoutX="327.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Add" />
       <DatePicker fx:id="AddPublishDatePicker" layoutX="210.0" layoutY="266.0" />
+      <Label fx:id="CheckAddBook" layoutX="364.0" layoutY="305.0" text="Label" />
    </children>
 </AnchorPane>
