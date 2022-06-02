@@ -16,8 +16,11 @@ public class AddBookController {
     public void goBack(ActionEvent event) throws IOException {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("BooksPage.fxml"));
         Parent OpenBooks= root.load();
+
+        BooksPageController B = root.getController();
+        B.setMainpane(mainPane);
+
         mainPane.getChildren().removeAll();
         mainPane.getChildren().setAll(OpenBooks);
-
     }
 }
