@@ -6,12 +6,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+//import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class HomePageController {
+    @FXML
+    Hyperlink HyperLink1;
+
     public AnchorPane mainPane;
 
     public void exit(ActionEvent event) {
@@ -49,6 +56,21 @@ public class HomePageController {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("BorrowBookPage.fxml"));
         Parent OpenBooks= root.load();
         BorrowBookPageController b = root.getController();
+        mainPane.getChildren().removeAll();
+        mainPane.getChildren().setAll(OpenBooks);
+
+    }
+
+    public void OpenRepositry(ActionEvent event) throws URISyntaxException, IOException {
+        //Desktop.getDesktop().browse(new URI("https://github.com/Husseinwageeh/LibrarySystem"));
+
+
+    }
+
+    public void OpenHome(ActionEvent event) throws IOException{
+        FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("HomePageRight.fxml"));
+        Parent OpenBooks= root.load();
+        HomePageRightController b = root.getController();
         mainPane.getChildren().removeAll();
         mainPane.getChildren().setAll(OpenBooks);
 

@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,7 +25,8 @@ TextField password;
 @FXML
 CheckBox RememberCheck;
 private Stage stage;
-
+@FXML
+Label IncorrectPass;
 @FXML
     public void logIN (ActionEvent event) throws IOException {
         String id = username.getText();
@@ -39,7 +41,7 @@ private Stage stage;
         }
         else
         {
-            System.out.println("Incorrect Password, Try again");
+            IncorrectPass.setText("Incorrect Password, Try again");
         }
 
     }

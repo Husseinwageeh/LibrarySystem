@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="406.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.HomePageRightController">
+   <children>
+      <ImageView fitHeight="183.0" fitWidth="161.0" layoutX="21.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="187.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="343.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="99.0" layoutY="31.0" text="Welcome To The Home Page" textFill="#9c782a">
+         <font>
+            <Font name="Garamond Bold" size="23.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="HyperLink2" layoutX="14.0" layoutY="364.0" onMouseClicked="#OpenRepositry2" prefHeight="26.0" prefWidth="198.0" text="This is a HyperLink Click Here For Repositry">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="385.0" layoutY="370.0" text="All Rights Reserved">
+         <font>
+            <Font name="System Bold Italic" size="9.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
