@@ -1,11 +1,15 @@
 package com.example.librarysystem;
 
+import java.util.Date;
+
 public class Member implements iMember
 {
-    String FullName, ContactNumber, Address, NationalID, Gender;
-    int Age;
+    String FullName, ContactNumber, Address, NationalID, Gender, MemberCol;
+    int Age, MemberID;
+    Date Date;
 
-    public Member(String fullName, String contactNumber,String address, String nationalID, String gender, int age)
+    public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender,
+                  int memberid, String membercol, Date date)
     {
         FullName = fullName;
         ContactNumber = contactNumber;
@@ -13,6 +17,33 @@ public class Member implements iMember
         NationalID = nationalID;
         Gender = gender;
         Age = age;
+        MemberID = memberid;
+        MemberCol = membercol;
+        Date = date;
+    }
+
+    public String getMemberCol() {
+        return MemberCol;
+    }
+
+    public void setMemberCol(String memberCol) {
+        MemberCol = memberCol;
+    }
+
+    public int getMemberID() {
+        return MemberID;
+    }
+
+    public void setMemberID(int memberID) {
+        MemberID = memberID;
+    }
+
+    public java.util.Date getDate() {
+        return Date;
+    }
+
+    public void setDate(java.util.Date date) {
+        Date = date;
     }
 
     public String getAddress() {
