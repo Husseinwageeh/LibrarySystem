@@ -8,13 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.BorrowBookPageController">
+<AnchorPane prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.BorrowBookPageController">
    <children>
       <FontAwesomeIconView fill="#9e700b" glyphName="TAGS" layoutX="14.0" layoutY="57.0" size="50" />
       <Button layoutX="22.0" layoutY="367.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Back" />
       <ChoiceBox layoutX="6.0" layoutY="125.0" prefHeight="26.0" prefWidth="122.0" />
-      <ChoiceBox layoutX="143.0" layoutY="125.0" prefHeight="26.0" prefWidth="122.0" />
+      <ChoiceBox layoutX="143.0" layoutY="125.0" prefHeight="26.0" prefWidth="129.0" />
       <Button layoutX="342.0" layoutY="367.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Borrow" />
       <Label layoutX="44.0" layoutY="105.0" text="Member" />
       <Label layoutX="188.0" layoutY="105.0" text="Books" />

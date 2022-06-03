@@ -80,7 +80,8 @@
                               <TableColumn minWidth="0.0" prefWidth="0.0" text="Age" />
                               <TableColumn prefWidth="47.99993896484375" text="Gender" />
                               <TableColumn minWidth="0.0" prefWidth="32.800048828125" text="ID" />
-                              <TableColumn prefWidth="129.59991455078125" text="Date" />
+                              <TableColumn prefWidth="48.800048828125" text="Date" />
+                              <TableColumn prefWidth="78.39996337890625" text="Book" />
                           </columns>
                         </TableView>
                      </children>
