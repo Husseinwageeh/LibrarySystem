@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -10,7 +11,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <AnchorPane fx:id="MembersPane" prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.MembersPageController">
    <children>
       <TabPane fx:id="tab" prefHeight="407.0" prefWidth="476.0" tabClosingPolicy="UNAVAILABLE">
@@ -59,30 +59,6 @@
                               <TableColumn fx:id="Gender" minWidth="0.0" prefWidth="53.5999755859375" text="Gender" />
                               <TableColumn fx:id="ID" minWidth="0.0" prefWidth="39.20001220703125" text="ID" />
                            </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-            <Tab fx:id="BorrowedBooks" text="Borrowed Books">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <FontAwesomeIconView fill="#9e700b" glyphName="USERS" layoutX="14.0" layoutY="66.0" selectionFill="#735454" size="50" text="" />
-                        <Button fx:id="BackBorrowedBtn" layoutX="41.0" layoutY="337.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Back" />
-                        <Button layoutX="351.0" layoutY="337.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Button" />
-                        <TableView fx:id="ListB" layoutX="3.0" layoutY="87.0" prefHeight="235.0" prefWidth="470.0">
-                          <columns>
-                            <TableColumn prefWidth="43.999940395355225" text="Name" />
-                            <TableColumn prefWidth="99.99999237060547" text="Phone Number" />
-                              <TableColumn prefWidth="54.39996337890625" text="Address" />
-                              <TableColumn prefWidth="70.4000244140625" text="National ID" />
-                              <TableColumn minWidth="0.0" prefWidth="0.0" text="Age" />
-                              <TableColumn prefWidth="47.99993896484375" text="Gender" />
-                              <TableColumn minWidth="0.0" prefWidth="32.800048828125" text="ID" />
-                              <TableColumn prefWidth="48.800048828125" text="Date" />
-                              <TableColumn prefWidth="78.39996337890625" text="Book" />
-                          </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
