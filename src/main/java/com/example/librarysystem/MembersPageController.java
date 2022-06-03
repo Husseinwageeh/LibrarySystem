@@ -35,8 +35,6 @@ public class MembersPageController implements Initializable {
 
 
 
-    @FXML
-    private TableView<Member> ListB;
     // second tab
     @FXML
     private Tab ListMembers;
@@ -64,11 +62,9 @@ public class MembersPageController implements Initializable {
 
     @FXML
     private Tab AddTab;
-    @FXML
-    private Tab BorrowedBooks;
+
     public Button BackAddBtn;
-    public TextField AddNameTxt;
-    public TextField AddPhoneTxt;
+
     ObservableList<String> genderTypes = FXCollections.observableArrayList("Male", "Female","Prefer not to say");
     private URL location;
     private ResourceBundle resources;
@@ -104,6 +100,15 @@ public class MembersPageController implements Initializable {
         tab.getSelectionModel().select(ListMembers);
 
 
+
+    }
+
+    public void Remove(ActionEvent actionEvent) throws SQLException {
+        Member m = ListM.getSelectionModel().getSelectedItem();
+        JDBC jdbc= JDBC.getInstance();
+        jdbc.deleteMember(m);
+        initialize(location,resources);
+        tab.getSelectionModel().select(ListMembers);
 
     }
 }

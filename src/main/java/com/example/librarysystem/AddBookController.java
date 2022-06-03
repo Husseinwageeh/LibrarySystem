@@ -51,9 +51,8 @@ public class AddBookController {
     }
 
     public void Addbook(ActionEvent actionEvent) throws SQLException, IOException {
-        String n=Name.getText(),a=Author.getText(),l=Language.getText(),p=Publisher.getText();
-        int q= Integer.parseInt(Quantity.getText());
-        Book b = new Book(5,n,a,l,p,q,1,1);
+
+        Book b = new Book(Name.getText(),Author.getText(),Language.getText(),Publisher.getText(),Integer.parseInt(Quantity.getText()),Integer.parseInt(Quantity.getText()),0);
         JDBC jdbc=JDBC.getInstance();
         jdbc.addBook(b);
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("BooksPage.fxml"));

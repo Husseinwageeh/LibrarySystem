@@ -1,12 +1,12 @@
 package com.example.librarysystem;
 
-public interface iMember {
-    String getFullName();
-    void setFullName(String name);
-    String getContactNumber();
-    void setContactNumber(String contactNumber);
-    void AddBook(iBook book);
-    void DeleteBook(iBook book);
+public abstract class iMember {
+    public iMember(){};
+   abstract String getFullName();
+   abstract void setFullName(String name);
+   abstract   String getContactNumber();
+   abstract void setContactNumber(String contactNumber);
+
 
 
 }

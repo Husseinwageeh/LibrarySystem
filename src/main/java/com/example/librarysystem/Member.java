@@ -1,16 +1,15 @@
 package com.example.librarysystem;
 
-import java.util.Date;
-
-public class Member implements iMember
+public class Member extends iMember
 {
     String FullName, ContactNumber, Address, NationalID, Gender, Borrowedbook;
     int Age, MemberID;
-    Date Date;
+    String Date;
 
     public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender,
-                  int memberid, String borrowedbook, Date date)
+                  int memberid, String borrowedbook, String date)
     {
+        super();
         FullName = fullName;
         ContactNumber = contactNumber;
         Address =  address;
@@ -24,6 +23,7 @@ public class Member implements iMember
     public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender,
                   int memberid)
     {
+        super();
         FullName = fullName;
         ContactNumber = contactNumber;
         Address =  address;
@@ -31,6 +31,14 @@ public class Member implements iMember
         Gender = gender;
         Age = age;
         MemberID = memberid;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
     }
 
     public String getBorrowedbook() {
@@ -49,13 +57,6 @@ public class Member implements iMember
         MemberID = memberID;
     }
 
-    public java.util.Date getDate() {
-        return Date;
-    }
-
-    public void setDate(java.util.Date date) {
-        Date = date;
-    }
 
     public String getAddress() {
         return Address;
@@ -94,6 +95,7 @@ public class Member implements iMember
         return FullName;
     }
 
+
     @Override
     public void setFullName(String fullName) {
         FullName = fullName;
@@ -109,15 +111,6 @@ public class Member implements iMember
         ContactNumber = contactNumber;
     }
 
-    @Override
-    public void AddBook(iBook book) {
-
-    }
-
-    @Override
-    public void DeleteBook(iBook book) {
-
-    }
 
 
 }
