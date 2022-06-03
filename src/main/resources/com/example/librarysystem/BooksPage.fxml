@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="BookPane" prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.BooksPageController">
+<AnchorPane fx:id="BookPane" prefHeight="406.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.BooksPageController">
    <children>
       <AnchorPane fx:id="AddB" layoutX="1.0" prefHeight="406.0" prefWidth="476.0">
          <children>
@@ -19,17 +16,16 @@
                </font>
             </Label>
             <Label fx:id="ChekRemoveBook" layoutX="343.0" layoutY="69.0" text="Label" />
-            <TableView layoutX="4.0" layoutY="153.0" prefHeight="235.0" prefWidth="470.0">
+            <TableView fx:id="Table" layoutX="5.0" layoutY="153.0" prefHeight="235.0" prefWidth="470.0">
               <columns>
-                <TableColumn prefWidth="34.399964332580566" text="Code" />
-                <TableColumn minWidth="0.0" prefWidth="65.60003280639648" text="Name" />
-                  <TableColumn prefWidth="56.79998779296875" text="Author" />
-                  <TableColumn minWidth="9.60003662109375" prefWidth="55.199951171875" text="Quantity" />
-                  <TableColumn prefWidth="62.39997863769531" text="Publisher" />
-                  <TableColumn prefWidth="39.20001220703125" text="Pages" />
-                  <TableColumn prefWidth="49.60003662109375" text="Availble" />
-                  <TableColumn prefWidth="60.79998779296875" text="Borrowed" />
-                  <TableColumn prefWidth="61.5999755859375" text="Language" />
+                <TableColumn fx:id="Code" editable="false" prefWidth="34.399964332580566" text="Code" />
+                <TableColumn fx:id="Name" minWidth="0.0" prefWidth="65.60003280639648" text="Name" />
+                  <TableColumn fx:id="Author" prefWidth="56.79998779296875" text="Author" />
+                  <TableColumn fx:id="Quantity" minWidth="9.60003662109375" prefWidth="55.199951171875" text="Quantity" />
+                  <TableColumn fx:id="Publisher" prefWidth="62.39997863769531" text="Publisher" />
+                  <TableColumn fx:id="Available" prefWidth="49.60003662109375" text="Available" />
+                  <TableColumn fx:id="Borrowed" prefWidth="60.79998779296875" text="Borrowed" />
+                  <TableColumn fx:id="Language" prefWidth="61.5999755859375" text="Language" />
               </columns>
             </TableView>
          </children>

@@ -47,7 +47,7 @@
                         <!-- these are some photos, 23mlo nfs 7war el startUpPage
                        For Moustafa copy K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg
                        Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\MP17240255.jpg" -->
-                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg" />
+                        <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\MP17240255.jpg" />
                      </image>
                      <effect>
                         <InnerShadow />
@@ -58,7 +58,7 @@
                         <!-- these are some photos, 23mlo nfs 7war el startUpPage
                      For Moustafa copy K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg
                      Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\719fXxqahzL.jpg" -->
-                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg" />
+                        <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\719fXxqahzL.jpg" />
                      </image>
                   </ImageView>
                   <Label layoutX="389.0" layoutY="375.0" text="All Rights Reserved">
@@ -71,7 +71,7 @@
                         <!-- these are some photos, 23mlo nfs 7war el startUpPage
                      For Moustafa copy
                      Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg" -->
-                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg" />
+                        <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg" />
                      </image>
                   </ImageView>
                </children>

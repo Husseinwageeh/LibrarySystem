@@ -21,6 +21,17 @@ public class Member implements iMember
         Borrowedbook = borrowedbook;
         Date = date;
     }
+    public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender,
+                  int memberid)
+    {
+        FullName = fullName;
+        ContactNumber = contactNumber;
+        Address =  address;
+        NationalID = nationalID;
+        Gender = gender;
+        Age = age;
+        MemberID = memberid;
+    }
 
     public String getBorrowedbook() {
         return Borrowedbook;

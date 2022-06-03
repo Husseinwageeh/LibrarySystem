@@ -19,7 +19,7 @@ public class JDBC {
     }
 
     private void connect() throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "rootpassword");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "toor");
     }
 
     private void disconnect() throws SQLException {
@@ -65,9 +65,9 @@ public class JDBC {
         //2.Incrementing it by one
         last++;
 
-        query = "INSERT INTO `sys`.`member`" +
+        query = "INSERT INTO `root`.`member`" +
                 "(`name`,`phone_number`,`address`,`national_id`,`age`,`gender`,`memberid`,`date`,`borrowed_book`)" +
-                " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                " values (?, ?, ?, ?, ?, ?, ?, ?,?)";
         try {
             PreparedStatement preparedStmt = conn.prepareStatement(query);
 
@@ -96,22 +96,23 @@ public class JDBC {
 
         //Generating Book ID(code):
         //1.Getting last Book ID
-        String query = "SELECT max(memberid) FROM member";
+        String query = "SELECT max(code) FROM book";
         Statement statement = conn.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
-        int last = -1;
+        int last =-1;
         try {
             while(resultSet.next()) {
                 last = resultSet.getInt(1);
+                System.out.println("hi");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         //2.Incrementing it by one
         last++;
-
-        query = "INSERT INTO `sys`.`book` (code, Name, Author, Quantity, Publisher, Number_Availble, Number_Borrowed, Language"
-                + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        System.out.println(last);
+        query = "INSERT INTO `root`.`book`" + " (code, Name, Author, Quantity, Publisher, Number_Availble, Number_Borrowed, Language)"
+                + "values (?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStmt = conn.prepareStatement(query);
 

@@ -5,7 +5,7 @@ public class Book implements iBook{
     int Quantity , Book_ID;
     int numAvailable;
     int numBorrowed;
-
+    // int pages must be added
     public Book(int book_ID, String title, String author, String language, String publisher, int quantity, int numAvailable,
                 int numBorrowed) {
         Book_ID = book_ID;
