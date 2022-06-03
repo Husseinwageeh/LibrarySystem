@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Member implements iMember
 {
-    String FullName, ContactNumber, Address, NationalID, Gender, MemberCol;
+    String FullName, ContactNumber, Address, NationalID, Gender, Borrowedbook;
     int Age, MemberID;
     Date Date;
 
     public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender,
-                  int memberid, String membercol, Date date)
+                  int memberid, String borrowedbook, Date date)
     {
         FullName = fullName;
         ContactNumber = contactNumber;
@@ -18,16 +18,16 @@ public class Member implements iMember
         Gender = gender;
         Age = age;
         MemberID = memberid;
-        MemberCol = membercol;
+        Borrowedbook = borrowedbook;
         Date = date;
     }
 
-    public String getMemberCol() {
-        return MemberCol;
+    public String getBorrowedbook() {
+        return Borrowedbook;
     }
 
-    public void setMemberCol(String memberCol) {
-        MemberCol = memberCol;
+    public void setBorrowedbook(String borrowedbook) {
+        Borrowedbook = borrowedbook;
     }
 
     public int getMemberID() {
