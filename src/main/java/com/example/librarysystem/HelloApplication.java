@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-       // (new JDBC()).test();
+      // (new JDBC()).test();
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("StartUpPage.fxml"));
         Scene scene = new Scene(root.load());
         stage.setTitle("AAST LIBRARY");

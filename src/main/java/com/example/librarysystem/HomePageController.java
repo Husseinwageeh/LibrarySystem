@@ -3,6 +3,7 @@ package com.example.librarysystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,8 +15,10 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class HomePageController {
+public class HomePageController implements Initializable{
     @FXML
     Hyperlink HyperLink1;
 
@@ -24,6 +27,7 @@ public class HomePageController {
     public void exit(ActionEvent event) {
         System.exit(0);
     }
+
 
     public void OpenBooks(ActionEvent actionEvent) throws IOException {
         FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("BooksPage.fxml"));
@@ -74,5 +78,18 @@ public class HomePageController {
         mainPane.getChildren().removeAll();
         mainPane.getChildren().setAll(OpenBooks);
 
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("HomePageRight.fxml"));
+        Parent OpenBooks= null;
+        try {
+            OpenBooks = root.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mainPane.getChildren().removeAll();
+        mainPane.getChildren().setAll(OpenBooks);
     }
 }

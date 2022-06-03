@@ -9,11 +9,13 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="406.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.HomePageRightController">
+<AnchorPane prefHeight="406.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.HomePageRightController">
    <children>
       <ImageView fitHeight="183.0" fitWidth="161.0" layoutX="21.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg" />
+            <!-- Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg
+         Mostafa K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg -->
+            <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\MP17240255.jpg" />
          </image>
          <effect>
             <InnerShadow />
@@ -21,7 +23,9 @@
       </ImageView>
       <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="187.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg" />
+            <!-- Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg
+         Mostafa K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg -->
+            <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\719fXxqahzL.jpg" />
          </image>
          <effect>
             <InnerShadow />
@@ -29,7 +33,9 @@
       </ImageView>
       <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="343.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg" />
+         <!-- Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg
+          Mostafa K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg -->
+            <Image url="C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg" />
          </image>
          <effect>
             <InnerShadow />
