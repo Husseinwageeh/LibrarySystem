@@ -55,7 +55,10 @@ public class MembersPageController implements Initializable {
     private TableColumn<Member, String> Gender;
     @FXML
     private TableColumn<Member, Integer> ID;
-
+    @FXML
+    Label CheckMemberRemove;
+    @FXML
+    Label CheckAddMember;
 
     @FXML
     private TabPane tab;
@@ -98,6 +101,7 @@ public class MembersPageController implements Initializable {
         jdbc.addMember(m);
         initialize(location,resources);
         tab.getSelectionModel().select(ListMembers);
+        CheckMemberRemove.setText("Member Added Successfully!");
 
 
 
@@ -109,6 +113,7 @@ public class MembersPageController implements Initializable {
         jdbc.deleteMember(m);
         initialize(location,resources);
         tab.getSelectionModel().select(ListMembers);
+        CheckMemberRemove.setText("Member Removed Successfully!");
 
     }
 }

@@ -10,11 +10,11 @@ public class Rules {
             "Normal Rules: \n" +
             "1- Keep books clean and dry \n" +
             "2- No food or drinks near the books\n" +
-            "3- keep books away from pets and babies (3ala asas enna hnd5al pets ya kosmk)\n" +
+            "3- keep books away from pets and babies \n" +
             "4- Do not color or draw in books\n" +
             "5- If you want to borrow a book you must become a member first\n" +
             "6- when you enter the library you must salute the portrait of Mohamed Fawzy\n" +
-            "7- Do not fuck with or in the library\n" +
+            "7- No member can borrow more than one copy of the same book!\n"+
             "---------------------------------------------------------------------------------------";
 
     private Rules()

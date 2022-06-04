@@ -73,6 +73,7 @@ public class BorrowBookPageController implements Initializable {
             }
         }
         initialize(location,resources);
+        CheckBorrowBook.setText("Book Borrowed Successfully!");
 
     }
 
