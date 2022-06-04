@@ -20,7 +20,7 @@ public class JDBC {
     }
 
     private void connect() throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys", "root", "rootpassword");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "toor");
     }
 
     private void disconnect() throws SQLException {
@@ -31,6 +31,23 @@ public class JDBC {
         jdbc.connect();
 
         String query = "SELECT * FROM member WHERE memberid = " + memberid;
+
+        Statement statement = conn.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+
+        if(resultSet.next()) {
+            jdbc.disconnect();
+            return true;
+        }
+
+        jdbc.disconnect();
+        return false;
+    }
+
+    public boolean bookExists(String name) throws SQLException {
+        jdbc.connect();
+
+        String query = "SELECT * FROM book WHERE Name = '" + name+"'";
 
         Statement statement = conn.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
@@ -67,8 +84,8 @@ public class JDBC {
         last++;
 
         query = "INSERT INTO `root`.`member`" +
-                "(`name`,`phone_number`,`address`,`national_id`,`age`,`gender`,`memberid`,`date`,`borrowed_book`,'borrow_state')" +
-                " values (?, ?, ?, ?, ?, ?, ?, ?,?)";
+                "(`name`,`phone_number`,`address`,`national_id`,`age`,`gender`,`memberid`,`date`,`borrowed_book`,`borrow_state`)" +
+                " values (?, ?, ?, ?, ?, ?, ?, ?,?,?)";
         try {
             PreparedStatement preparedStmt = conn.prepareStatement(query);
 
@@ -94,46 +111,52 @@ public class JDBC {
     }
     public void addBook(Book book) throws SQLException {
 
-        jdbc.connect();
-
-        //Generating Book ID(code):
-        //1.Getting last Book ID
-        String query = "SELECT max(code) FROM book";
-        Statement statement = conn.createStatement();
-        ResultSet resultSet = statement.executeQuery(query);
-        int last =-1;
-        try {
-            while(resultSet.next()) {
-                last = resultSet.getInt(1);
-                System.out.println("hi");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        if(bookExists(book.getTitle()))
+        {
+            jdbc.addQuantity(book.getTitle(), book.getQuantity());
         }
-        //2.Incrementing it by one
-        last++;
-        System.out.println(last);
-        query = "INSERT INTO `root`.`book`" + " (code, Name, Author, Quantity, Publisher, Number_Availble, Number_Borrowed, Language)"
-                + "values (?, ?, ?, ?, ?, ?, ?, ?)";
-        try {
-            PreparedStatement preparedStmt = conn.prepareStatement(query);
+        else {
+            jdbc.connect();
 
-            preparedStmt.setInt(1, last);
-            preparedStmt.setString(2, book.getTitle());
-            preparedStmt.setString(3, book.getAuthor());
-            preparedStmt.setInt(4, book.getQuantity());
-            preparedStmt.setString(5, book.getPublisher());
-            preparedStmt.setInt(6, book.getNumAvailable());
-            preparedStmt.setInt(7, book.getNumBorrowed());
-            preparedStmt.setString(8, book.getLanguage());
+            //Generating Book ID(code):
+            //1.Getting last Book ID
 
-            preparedStmt.execute();
+            String query = "SELECT max(code) FROM book";
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            int last = -1;
+            try {
+                while (resultSet.next()) {
+                    last = resultSet.getInt(1);
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            //2.Incrementing it by one
+            last++;
+            System.out.println(last);
+            query = "INSERT INTO `root`.`book`" + " (code, Name, Author, Quantity, Publisher, Number_Availble, Number_Borrowed, Language)"
+                    + "values (?, ?, ?, ?, ?, ?, ?, ?)";
+            try {
+                PreparedStatement preparedStmt = conn.prepareStatement(query);
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+                preparedStmt.setInt(1, last);
+                preparedStmt.setString(2, book.getTitle());
+                preparedStmt.setString(3, book.getAuthor());
+                preparedStmt.setInt(4, book.getQuantity());
+                preparedStmt.setString(5, book.getPublisher());
+                preparedStmt.setInt(6, book.getNumAvailable());
+                preparedStmt.setInt(7, book.getNumBorrowed());
+                preparedStmt.setString(8, book.getLanguage());
 
-        } finally {
-            jdbc.disconnect();
+                preparedStmt.execute();
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+
+            } finally {
+                jdbc.disconnect();
+            }
         }
     }
 
@@ -142,12 +165,12 @@ public class JDBC {
         jdbc.connect();
 
         int oldQuantity = 0;
-
+        int oldAvailable=0;
         Statement statement = conn.createStatement();
 
-        String query = "SELECT * FROM book WHERE Name = " + bookName;
+        String query = "SELECT * FROM book WHERE Name = '" + bookName+"'";
 
-        String query2 = "UPDATE book SET Quantity = " + (oldQuantity + quantity) + " WHERE Name = " + bookName;
+
 
         try {
 
@@ -156,8 +179,9 @@ public class JDBC {
             while(resultSet.next())
             {
                 oldQuantity = resultSet.getInt("Quantity");
+                oldAvailable=resultSet.getInt("Number_Availble");
             }
-
+            String query2 = "UPDATE book SET Quantity = " + (oldQuantity + quantity) + " , Number_Availble = "+ (oldAvailable+quantity) +" WHERE Name = '" + bookName+"'";
             statement.executeUpdate(query2);
 
 
@@ -173,24 +197,17 @@ public class JDBC {
 
         jdbc.connect();
 
-        String Null = "";
 
         String bookName = "";
 
-        int available = 0;
-        int borrowed = 0;
-
         Statement statement = conn.createStatement();
 
-        String query = "SELECT * FROM member WHERE name = " + memberName;
+        String query = "SELECT * FROM member WHERE name = '" + memberName+"'";
 
-        String query2 = "UPDATE member SET borrowed_book = " + Null + " , borrow_state = 0 , date = " + Null +
-                " WHERE name = '" + memberName+"'";
+        String query2 = "UPDATE member SET borrowed_book =  NULL  , borrow_state = 0 , date = NULL WHERE name = '" + memberName+"'";
 
-        String query3 = "SELECT * FROM book WHERE Name = " + bookName;
 
-        String query4 = "UPDATE book SET Number_Availble = " + (available + 1) + " , Number_Borrowed = " + (borrowed - 1) +
-                " WHERE name = '" + bookName+"'";
+
 
         try {
 
@@ -200,16 +217,21 @@ public class JDBC {
             {
                 bookName = resultSet.getString("borrowed_book");
             }
+            String query3 = "SELECT * FROM book WHERE Name = '" + bookName+"'";
 
             statement.executeUpdate(query2);
 
             ResultSet resultSet3 = statement.executeQuery(query3);
 
+            int available=0;
+            int borrowed=0;
             while(resultSet3.next())
             {
                 available = resultSet3.getInt("Number_Availble");
                 borrowed = resultSet3.getInt("Number_Borrowed");
             }
+            String query4 = "UPDATE book SET Number_Availble = " + (available + 1) + " , Number_Borrowed = " + (borrowed - 1) +
+                    " WHERE name = '" + bookName+"'";
 
             statement.executeUpdate(query4);
 
@@ -451,24 +473,21 @@ public class JDBC {
         return available_borrowed;
     }
 
-    public void borrowBook(String memberName, String bookName) throws SQLException {
+    public void borrowBook(String memberName, String bookName,String date) throws SQLException {
 
         jdbc.connect();
-        String query = "UPDATE member SET borrowed_book = " + bookName + " , borrow_state = 1 WHERE name = '" + memberName+"'";
+        String query = "UPDATE member SET borrowed_book = '" + bookName + "' , borrow_state = 1 , date = '"+ date+"' WHERE name = '" + memberName+"'";
 
         int[] available_borrowed = getNum(bookName); // Calling the helper function above;
 
         String query2 = "UPDATE book SET Number_Availble = " + (available_borrowed[0]) + ", Number_Borrowed = "+ available_borrowed[1] + " WHERE Name = '" + bookName+ "'";
-        System.out.println(query2);
         Statement statement = conn.createStatement();
 
         try {
-            System.out.println(available_borrowed[0]);
             if(available_borrowed[0] == -1)
                 throw new Exception("No Numbers Available!");
 
-            int resultSet = statement.executeUpdate(query);
-
+            statement.executeUpdate(query);
             statement.executeUpdate(query2);
 
 

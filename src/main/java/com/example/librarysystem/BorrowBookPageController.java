@@ -53,7 +53,7 @@ public class BorrowBookPageController implements Initializable {
 
     ObservableList<String> AvailableBooks = FXCollections.observableArrayList();
     ObservableList<String> Members = FXCollections.observableArrayList();
-    ArrayList<Member>m = JDBC.getInstance().getAllMembers();
+    ArrayList<Member>m = JDBC.getInstance().getNonBorrowMembers();
 
     private URL location;
     private ResourceBundle resources;
@@ -64,7 +64,7 @@ public class BorrowBookPageController implements Initializable {
 
     public void BorrowBook(ActionEvent actionEvent) throws SQLException {
         JDBC jdbc=JDBC.getInstance();
-        jdbc.borrowBook(Member.getValue(),Books.getValue());
+        jdbc.borrowBook(Member.getValue(),Books.getValue(),DateP.getValue().toString());
         for(Member member : m) {
             if(member.getFullName().equals(Member.getValue()))
             {
@@ -86,7 +86,7 @@ public class BorrowBookPageController implements Initializable {
 
         ObservableList<Member> list = FXCollections.observableArrayList();
         try {
-            ArrayList<Member> MemberTmp =  JDBC.getInstance().getAllMembers();
+            ArrayList<Member> MemberTmp =  JDBC.getInstance().getBorrowMembers();
             list.addAll(MemberTmp);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -99,7 +99,7 @@ public class BorrowBookPageController implements Initializable {
         Age.setCellValueFactory(new PropertyValueFactory<>("Age"));
         Gender.setCellValueFactory(new PropertyValueFactory<>("Gender"));
         Date.setCellValueFactory(new PropertyValueFactory<>("Date"));
-        Book.setCellValueFactory(new PropertyValueFactory<>("BorrowedBook"));
+        Book.setCellValueFactory(new PropertyValueFactory<>("Borrowedbook"));
 
         LitsB.setItems(list);
 
@@ -108,16 +108,21 @@ public class BorrowBookPageController implements Initializable {
             for(Book book : Tmp) {
                 AvailableBooks.add(book.getTitle());
             }
-            ArrayList<Member> MTmp=JDBC.getInstance().getAllMembers();
+            ArrayList<Member> MTmp=JDBC.getInstance().getNonBorrowMembers();
             for(Member member : MTmp) {
                 Members.add(member.FullName);
             }
-
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         Books.setItems(AvailableBooks);
         Member.setItems(Members);
+    }
+
+    public void ReturnBook(ActionEvent actionEvent) throws SQLException {
+        JDBC jdbc = JDBC.getInstance();
+        jdbc.returnBook(LitsB.getSelectionModel().getSelectedItem().FullName);
+        initialize(location,resources);
     }
 }
