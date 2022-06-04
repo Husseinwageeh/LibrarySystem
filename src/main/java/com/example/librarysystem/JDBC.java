@@ -19,7 +19,7 @@ public class JDBC {
     }
 
     private void connect() throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "toor");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "ps4dragon4");
     }
 
     private void disconnect() throws SQLException {
@@ -283,8 +283,8 @@ public class JDBC {
                 int numBorrowed = resultSet.getInt("Number_Borrowed");
                 if(numAvailable != 0)
                 {
-                    available_borrowed[0] = numAvailable--;
-                    available_borrowed[1] = numBorrowed++;
+                    available_borrowed[0] = numAvailable-1;
+                    available_borrowed[1] = numBorrowed+1;
                     return available_borrowed;
                 }
 
@@ -303,23 +303,19 @@ public class JDBC {
 
         int[] available_borrowed = getNum(bookName); // Calling the helper function above;
 
-        String query2 = "UPDATE book " + " SET Availble=?, Number_Borrowed=?"  + "WHERE code = ?";
-
+        String query2 = "UPDATE book SET Number_Availble = " + (available_borrowed[0]) + ", Number_Borrowed = "+ available_borrowed[1] + " WHERE Name = '" + bookName+ "'";
+        System.out.println(query2);
         Statement statement = conn.createStatement();
 
         try {
+            System.out.println(available_borrowed[0]);
             if(available_borrowed[0] == -1)
                 throw new Exception("No Numbers Available!");
 
             int resultSet = statement.executeUpdate(query);
-            System.out.println(1);
-            PreparedStatement preparedStmt = conn.prepareStatement(query2);
-            preparedStmt.setInt(1, available_borrowed[0]);
-            preparedStmt.setInt(2, available_borrowed[1]);
-            System.out.println(available_borrowed[0]);
-            preparedStmt.setInt(3, 3);
-            preparedStmt.execute();
-            System.out.println(2);
+
+            statement.executeUpdate(query2);
+
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
