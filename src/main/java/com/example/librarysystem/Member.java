@@ -20,8 +20,7 @@ public class Member extends iMember
         Borrowedbook = borrowedbook;
         Date = date;
     }
-    public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender,
-                  int memberid)
+    public Member(String fullName, String contactNumber, String address, String nationalID, int age, String gender)
     {
         super();
         FullName = fullName;
@@ -30,7 +29,7 @@ public class Member extends iMember
         NationalID = nationalID;
         Gender = gender;
         Age = age;
-        MemberID = memberid;
+
     }
 
     public String getDate() {
@@ -109,6 +108,21 @@ public class Member extends iMember
     @Override
     public void setContactNumber(String contactNumber) {
         ContactNumber = contactNumber;
+    }
+    public void knowMinor(String Name, int age)
+    {
+        if(age<21)
+            System.out.println(Name + "is minor!");
+        else
+            System.out.println(Name+ "is Major ehehehheehe!");
+    }
+
+    public void knowMinor(int age)
+    {
+        if(age<21)
+            System.out.println(this.FullName + "is minor!");
+        else
+            System.out.println(this.FullName+"is Major ehehehheehe!");
     }
 
 

@@ -31,22 +31,30 @@ private Stage stage;
 Label IncorrectPass;
 @FXML
     public void logIN (ActionEvent event) throws IOException {
+    try {
         String id = username.getText();
         String Password = password.getText();
-        if(id .equals("admin") && Password.equals("admin"))
-        {
-            stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        if (id.equals("admin") && Password.equals("admin")) {
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader root = new FXMLLoader(HelloApplication.class.getResource("HomePage.fxml"));
             Scene scene = new Scene(root.load());
             stage.setScene(scene);
             stage.show();
+        } else if (id.equals("admin") && !password.equals("admin"))
+        {
+            throw new Exception("Incorrect Password, Try again");
+
         }
         else
         {
-            IncorrectPass.setText("Incorrect Password, Try again");
-        }
+            throw new Exception("Enter a valid value!");
 
+        }
+    } catch (Exception e)
+    {
+        IncorrectPass.setText(e.getMessage());
     }
+}
 
     public void LoginFawzy(ActionEvent event) throws IOException {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

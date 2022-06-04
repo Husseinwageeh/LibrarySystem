@@ -6,12 +6,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="405.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.HomePageController">
+<AnchorPane prefHeight="405.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.HomePageController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="1.0" layoutY="-2.0" prefHeight="407.0" prefWidth="700.0">
         <items>
@@ -42,38 +40,11 @@
                         <Font size="10.0" />
                      </font>
                   </Hyperlink>
-                  <ImageView fitHeight="183.0" fitWidth="161.0" layoutX="14.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <!-- these are some photos, 23mlo nfs 7war el startUpPage
-                       For Moustafa copy K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg
-                       Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\MP17240255.jpg" -->
-                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\MP17240255.jpg" />
-                     </image>
-                     <effect>
-                        <InnerShadow />
-                     </effect>
-                  </ImageView>
-                  <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="180.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <!-- these are some photos, 23mlo nfs 7war el startUpPage
-                     For Moustafa copy K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg
-                     Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\719fXxqahzL.jpg" -->
-                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\719fXxqahzL.jpg" />
-                     </image>
-                  </ImageView>
                   <Label layoutX="389.0" layoutY="375.0" text="All Rights Reserved">
                      <font>
                         <Font name="System Bold Italic" size="9.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="183.0" fitWidth="130.0" layoutX="349.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <!-- these are some photos, 23mlo nfs 7war el startUpPage
-                     For Moustafa copy
-                     Hussein's path C:\Users\omarw\LibrarySytem\LibrarySystem\src\45485484844844564.jpg" -->
-                        <Image url="K:\AAST\Terme 6\OOP\project a7a\LibrarySystem\src\45485484844844564.jpg" />
-                     </image>
-                  </ImageView>
                </children>
                <effect>
                   <InnerShadow />

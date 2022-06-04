@@ -90,15 +90,7 @@ public class Book implements iBook{
         Quantity = quantity;
     }
 
-    @Override
-    public void addBorrower(iMember member) {
 
-    }
-
-    @Override
-    public void deleteBorrower(iMember member) {
-
-    }
 
     public int getNumAvailable() {
         return numAvailable;
@@ -107,5 +99,6 @@ public class Book implements iBook{
     public void setNumAvailable(int numAvailable) {
         this.numAvailable = numAvailable;
     }
+
 
 }

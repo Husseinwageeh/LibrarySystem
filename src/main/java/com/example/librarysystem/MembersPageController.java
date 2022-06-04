@@ -96,7 +96,7 @@ public class MembersPageController implements Initializable {
 
     public void AddMember(ActionEvent actionEvent) throws SQLException {
         Date d = new Date();
-        Member m = new Member(Name_Add.getText(),Phone_Add.getText(),Address_Add.getText(),National_Add.getText(),Integer.parseInt(ID_Add.getText()),Gender_Add.getValue(),Integer.parseInt(Age_Add.getText()));
+        Member m = new Member(Name_Add.getText(),Phone_Add.getText(),Address_Add.getText(),National_Add.getText(),Integer.parseInt(Age_Add.getText()),Gender_Add.getValue());
         JDBC jdbc= JDBC.getInstance();
         jdbc.addMember(m);
         initialize(location,resources);

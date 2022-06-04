@@ -5,7 +5,6 @@ public interface iBook {
     void setTitle(String Title);
     int getQuantity();
     void setQuantity(int number);
-    void addBorrower(iMember member);
-    void deleteBorrower(iMember member);
+
 
 }
