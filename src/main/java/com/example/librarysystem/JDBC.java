@@ -19,7 +19,7 @@ public class JDBC {
     }
 
     private void connect() throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "ps4dragon4");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "toor");
     }
 
     private void disconnect() throws SQLException {
