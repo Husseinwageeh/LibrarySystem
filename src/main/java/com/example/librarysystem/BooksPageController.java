@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -43,6 +44,10 @@ public class  BooksPageController implements Initializable {
     private TableColumn<Book, String> Language;
 
     @FXML
+     Label label;
+    private URL location;
+    private ResourceBundle resources;
+    @FXML
     public AnchorPane mainpane;
     public void setMainpane(AnchorPane mainpane) {
         this.mainpane = mainpane;
@@ -63,31 +68,16 @@ public class  BooksPageController implements Initializable {
         Book b= Table.getSelectionModel().getSelectedItem();
         JDBC jdbc = JDBC.getInstance();
         jdbc.deleteBook(b);
-
-        ObservableList<Book> list = FXCollections.observableArrayList();
-        try {
-            ArrayList<Book> BooksTmp =  JDBC.getInstance().getAllBooks();
-            list.addAll(BooksTmp);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        Code.setCellValueFactory(new PropertyValueFactory<>("Book_ID"));
-        Name.setCellValueFactory(new PropertyValueFactory<>("Title"));
-        Author.setCellValueFactory(new PropertyValueFactory<>("Author"));
-        Quantity.setCellValueFactory(new PropertyValueFactory<>("Quantity"));
-        Publisher.setCellValueFactory(new PropertyValueFactory<>("Publisher"));
-        Available.setCellValueFactory(new PropertyValueFactory<>("numAvailable"));
-        Borrowed.setCellValueFactory(new PropertyValueFactory<>("numBorrowed"));
-        Language.setCellValueFactory(new PropertyValueFactory<>("Language"));
-
-        Table.setItems(list);
-
+        initialize(location,resources);
+        label.setText(b.getTitle()+" is removed");
 
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.resources=resourceBundle;
+        this.location=url;
        ObservableList<Book> list = FXCollections.observableArrayList();
         try {
             ArrayList<Book> BooksTmp =  JDBC.getInstance().getAllBooks();

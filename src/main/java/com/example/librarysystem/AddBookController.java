@@ -5,9 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -60,6 +62,7 @@ public class AddBookController {
 
         BooksPageController B = root.getController();
         B.setMainpane(mainPane);
+        B.label.setText(b.getTitle() + " is added successfully");
 
         mainPane.getChildren().removeAll();
         mainPane.getChildren().setAll(OpenBooks);

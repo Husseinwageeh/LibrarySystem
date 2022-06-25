@@ -20,7 +20,7 @@ public class JDBC {
     }
 
     private void connect() throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "ps4dragon4");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "toor");
     }
 
     private void disconnect() throws SQLException {
@@ -61,7 +61,6 @@ public class JDBC {
         return false;
     }
 
-    // TODO: 6/2/2022
     public void addMember(Member member) throws SQLException {
         if(memberExists(member.getMemberID())) {
             //throw new UserExistsException();
@@ -477,6 +476,7 @@ public class JDBC {
 
         jdbc.connect();
         String query = "UPDATE member SET borrowed_book = '" + bookName + "' , borrow_state = 1 , date = '"+ date+"' WHERE name = '" + memberName+"'";
+
 
         int[] available_borrowed = getNum(bookName); // Calling the helper function above;
 
